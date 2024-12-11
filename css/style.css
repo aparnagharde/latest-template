@@ -1,64 +1,167 @@
-/* -----------------------------------------------------------------------------------
-
- 01. Google fonts
- 02. Basics style
- 03. Helper style - [NEW] 
- 03. Selection style 
- 05. Owl-Theme custom style
- 06. Section style
- 07. Navbar style
- 08. Header style
- 09. Slider style
- 10. Slider Left Panel style
- 11. Slider Grid Background - [NEW]
- 12. Kenburns Slider style - [NEW]
- 13. Page Banner Header style
- 14. Content Lines style
- 15. Video Background - [NEW] 
- 16. About style 
- 17. Team style
- 18. Team Details style
- 19. Careers style - [NEW] 
- 20. Services style
- 21. Services2 style - [NEW]
- 22. Services3 style - [NEW]
- 23. Services4 style - [NEW]
- 24. Projects style
- 25. Projects2 (masonry) style
- 26. Projects3 style
- 27. Projects4 style
- 28. Project Gallery style
- 29. Project Page style - [NEW]
- 30. Clients style
- 31. Gallery style
- 32. Promo Video and Testimonials style
- 33. Blog 1 style
- 34. Blog 2 style
- 35. Blog 3 style
- 36. Blog 4 style - [NEW] 
- 37. Post style
- 38. Contact style
- 39. Buttons style
- 40. Footer style
- 41. Corner style
- 42. Preloader style
- 43. toTop Button style
- 44. Accordion Box (for Faqs) style
- 45. Pricing plan style
- 46. Error Page - 404 style
- 47. Process style
- 48. Process 2 style - [NEW] 
- 49. Comming soon style
- 50. Overlay Effect Bg image style - [NEW]
- 51. Responsive (Media Query)
- 
------------------------------------------------------------------------------------ */
 
 
-/* ======= Google fonts (Oswald & Didact Gothic) ======= */
+
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&amp;family=Oswald:wght@200;300;400;500;600;700&amp;display=swap');
 
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
 
+.bg-grey{
+    background: #f4f4f4;
+}
+.header-top{
+    background: #0f2934;
+    text-align: center;
+    color: #fff;
+    padding: 0px 0px;
+}
+/* custom marquee */
+/* custom marquee */
+.custom-marquee .marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+  
+  .custom-marquee .marquee {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  
+  .custom-marquee .marquee-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-animation: marquee 30s linear infinite;
+    animation: marquee 30s linear infinite;
+  }
+  
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .custom-marquee .marquee-content {
+      -webkit-animation: marquee 20s linear infinite;
+      animation: marquee 20s linear infinite;
+    }
+  }
+  
+  @media (max-width: 767.98px) {
+    .custom-marquee .marquee-content {
+      -webkit-animation: marquee 10s linear infinite;
+      animation: marquee 10s linear infinite;
+    }
+  }
+  
+  .custom-marquee .primary-bg {
+    padding: 45px 0;
+    background-color: #0f2934;
+  }
+  
+  .custom-marquee .primary-bg span {
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 80px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.5);
+    font-family: var(--rr-ff-body);
+    cursor: pointer;
+
+}
+  
+  
+  .custom-marquee .black-bg {
+    padding: 45px 0;
+    background-color: #000000;
+  }
+  
+ .marquee-row-1 span::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    /* left: -20px; */
+    width: 39px;
+    height: 39px;
+    background-image: url(https://html.rrdevs.net/artima/assets/imgs/text-slider/star.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+  .custom-marquee .marquee-row-1 {
+    -webkit-animation-direction: normal;
+    animation-direction: normal;
+  }
+  
+  .custom-marquee .marquee-row-2 {
+    animation-direction: reverse;
+  }
+  
+  .custom-marquee .marquee-content span {
+    display: inline-block;
+    padding: 0 46px;
+  }
+  
+  @-webkit-keyframes marquee {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes marquee {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  }
+  
+/*/ start count stats /*/
+
+section#counter-stats {
+	display: flex;
+	justify-content: center;
+    background: #0f2934;
+    padding: 65px 9px;
+}
+
+.stats {
+  text-align: center;
+  font-size: 35px;
+ 
+}
+
+.stats .fa {
+    font-size: 45px;
+    margin-bottom: 30px;
+    color: #b19777;
+}
+.counting {
+    margin-bottom: 19px;
+    color: #fff;
+    font-size: 43px;
+}
+.number{
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 20px;
+}
+.number h5{
+    font-size: 25px;
+    color: #fff;
+}
+
+/*/ end count stats /*/
 /* ======= Basic style ======= */
 html,
 body {
@@ -84,10 +187,11 @@ body {
     color: #777;
     overflow-x: hidden !important;
     background: #fff;
+
 }
 p {
-    font-family: 'Didact Gothic', sans-serif;
-    font-size: 16px;
+    font-family: 'Futura LT', sans-serif;
+    font-size: 20px;
     font-weight: 400;
     line-height: 1.75em;
     color: #777;
@@ -99,7 +203,9 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Oswald', sans-serif;
+    font-family: "Forum", serif;
+    font-weight: 400;
+    font-style: normal;
     font-weight: 400;
     line-height: 1.25em;
     margin: 0 0 20px 0;
@@ -472,12 +578,10 @@ blockquote cite:before {
 }
 .section-title {
     font-size: 40px;
-    font-family: 'Oswald', sans-serif;
     font-weight: 400;
     color: #272727;
     text-transform: uppercase;
     position: relative;
-    letter-spacing: 10px;
     word-spacing: 5px;
     margin-bottom: 30px;
 }
@@ -504,7 +608,7 @@ blockquote cite:before {
     left: 0;
     top: 0;
     width: 100%;
-    background: transparent;
+    background: #fff;
     z-index: 99;
     padding-right: 0;
     padding-left: 0;
@@ -519,20 +623,20 @@ blockquote cite:before {
 }
 .navbar .navbar-toggler-icon,
 .navbar .icon-bar {
-    color: #FFF;
+    color: #000;
 }
 .navbar .navbar-nav .nav-link {
     font-size: 15px;
     font-weight: 300;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: #fff;
+    color: #000!important;
     margin: 1px;
     -webkit-transition: all .4s;
     transition: all .4s;
     padding-right: 12px;
     padding-left: 12px;
-    font-family: 'Oswald', sans-serif;
+
 }
 .navbar .navbar-nav .nav-link.nav-color {
     color: #272727;
@@ -578,7 +682,7 @@ blockquote cite:before {
     color: #fff;
 }
 .nav-scroll .logo-img {
-    width: 115px;
+    width: 180px;
 }
 .nav-scroll .logo-img {
     margin-bottom: 0px;
@@ -645,7 +749,7 @@ blockquote cite:before {
 }
 .logo-img {
     padding: 20px 0;
-    width: 125px;
+    width: 200px;
     text-align: center;
 }
 .dropdown .nav-link i {
@@ -1274,11 +1378,22 @@ hr {
 }
 
 
+.catering-card {
+    height: 464px;
+    padding: 30px 45px;
+    /* margin: 51px 26px; */
+    box-shadow: 0 10px 25px 5px rgb(0 0 0 / 5%);
+    background: #fff;
+}
 
+.catering-card li {
+
+    list-style: disc;
+}
 
 /* ======= Page Banner Header style ======= */
 .banner-header {
-    height: 50vh;
+    height: 20vh;
     z-index: -2;
 }
 .banner-header h6 {
@@ -1357,7 +1472,7 @@ hr {
 
 
 /* =======  Content Lines style  ======= */
-.content-wrapper {
+/* .content-wrapper {
     position: relative;
 }
 .content-lines-wrapper {
@@ -1366,8 +1481,8 @@ hr {
     width: 100%;
     height: 100%;
     overflow: hidden;
-}
-.content-lines-inner {
+} */
+/* .content-lines-inner {
     position: absolute;
     width: 1140px;
     left: 50%;
@@ -1377,15 +1492,15 @@ hr {
     border-left: 1px solid #f4f4f4;
     border-right: 1px solid #f4f4f4;
     border-bottom: 1px solid #f4f4f4;
-}
-.content-lines {
+} */
+/* .content-lines {
     position: absolute;
     left: 33.666666%;
     right: 33.666666%;
     height: 100%;
     border-left: 1px solid #f4f4f4;
     border-right: 1px solid #f4f4f4;
-}
+} */
 
 
 
@@ -1924,6 +2039,9 @@ hr {
 }
 .services2 .services2-img {
     position: relative
+}
+.services2 .services2-img img {
+height: 400px;
 }
 .services2 .services2-img:before {
     content: '';
@@ -3083,7 +3201,7 @@ hr {
 
 /* ======= Clients style ======= */
 .clients {
-    background-color: #f4f4f4;
+    background-color: #0f2934;
 }
 .clients .owl-carousel {
     margin: 20px 0;
@@ -3995,15 +4113,14 @@ hr.border-2 {
 }
 .butn-dark a {
     font-weight: 300;
-    font-family: 'Oswald', sans-serif;
+    /* font-family: 'Oswald', sans-serif; */
     text-transform: uppercase;
-    background: #b19777;
+    background: #0f2934;
     color: #fff;
     padding: 13px 30px;
-    margin: 0;
+    /* margin: 0; */
     position: relative;
-    font-size: 16px;
-    letter-spacing: 3px;
+
 }
 .butn-dark a:after {
     content: '';
@@ -4083,8 +4200,8 @@ hr.border-2 {
     position: initial;
 }
 .main-footer.dark {
-    background: #fff;
-    color: #272727;
+    background: #0f2934;
+    color: #fff!important;
 }
 .main-footer .abot p {
     color: #777;
@@ -4136,6 +4253,7 @@ hr.border-2 {
 .main-footer .fotcont p {
     margin-bottom: 0px;
     position: relative;
+    color: #fff;
 }
 /* sub footer */
 .main-footer .sub-footer {
@@ -4146,7 +4264,7 @@ hr.border-2 {
 }
 .main-footer .sub-footer p {
     font-size: 14px;
-    color: #777;
+    color: #fff;
     margin-top: 7px;
 }
 .main-footer .sub-footer p a:hover {
@@ -5061,7 +5179,7 @@ hr.border-2 {
 /* ======= Responsive style ======= */
 @media (min-width: 1200px) {
     .container {
-        max-width: 1140px !important;
+        max-width: 1300px !important;
     }
 }
 

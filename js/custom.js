@@ -1,32 +1,4 @@
 
-/* ----------------------------------------------------------------
-
-[ Custom settings ]
-
-01. ScrollIt
-02. Navbar scrolling background
-03. Close navbar-collapse when a  clicked
-04. Sections background image from data background 
-05. Isotope active
-06. Animations
-07. YouTubePopUp
-08. Testimonials owlCarousel
-09. Projects owlCarousel
-10. Project Page owlCarousel - NEW
-11. Blog owlCarousel
-12. Team owlCarousel
-13. Clients owlCarousel
-14. Services owlCarousel
-15. Team owlCarousel
-16. MagnificPopup (Image, Youtube, Vimeo and custom popup)
-17. Scroll back to top
-18. Slider
-19. Accordion Box
-20. Preloader
-21. Contact Form
-22. Grid Background
-
-------------------------------------------------------------------- */
 
 $(function() {
     
@@ -190,7 +162,7 @@ $(function() {
         loop: true
         , margin: 30
         , mouseDrag: true
-        , autoplay: false
+        , autoplay: true
         , dots: true
         , autoplayHoverPause:true
         , responsiveClass: true
@@ -199,10 +171,10 @@ $(function() {
                 items: 1
             , }
             , 600: {
-                items: 2
+                items: 3
             }
             , 1000: {
-                items: 2
+                items: 3
             }
         }
     });
@@ -212,7 +184,7 @@ $(function() {
         loop: true
         , margin: 30
         , mouseDrag: true
-        , autoplay: false
+        , autoplay: true
         , dots: false
         , nav: true
         , navText: ['<i class="ti-arrow-left" aria-hidden="true"></i>', '<i class="ti-arrow-right" aria-hidden="true"></i>']
@@ -222,10 +194,10 @@ $(function() {
                 items: 1
             , }
             , 600: {
-                items: 1
+                items:2
             }
             , 1000: {
-                items: 1
+                items: 2
             }
         }
     });
@@ -235,7 +207,7 @@ $(function() {
         loop: true
         , margin: 30
         , mouseDrag: true
-        , autoplay: false
+        , autoplay: true
         , dots: true
         , responsiveClass: true
         , responsive: {
@@ -243,10 +215,10 @@ $(function() {
                 items: 1
             , }
             , 600: {
-                items: 2
+                items: 3
             }
             , 1000: {
-                items: 2
+                items: 3
             }
         }
     });
@@ -491,3 +463,29 @@ if ($(".accordion-box").length) {
     });
     
 
+
+    $('.counting').each(function() {
+        var $this = $(this),
+            countTo = $this.attr('data-count');
+        
+        $({ countNum: $this.text()}).animate({
+          countNum: countTo
+        },
+      
+        {
+      
+          duration: 3000,
+          easing:'linear',
+          step: function() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function() {
+            $this.text(this.countNum);
+            //alert('finished');
+          }
+      
+        });  
+        
+      
+      });
+           
